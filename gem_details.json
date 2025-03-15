@@ -1,0 +1,211 @@
+{
+  "gems": [
+    {
+      "id": 1,
+      "name": "Ruby",
+      "hardness": 9,
+      "specific_gravity_low": 3.98,
+      "specific_gravity_high": 4.05,
+      "chemical_formula": "Al2O3",
+      "image": "../images/gems/ruby.png"
+    },
+    {
+      "id": 2,
+      "name": "Alexandrite",
+      "hardness": 8.5,
+      "specific_gravity_low": 3.7,
+      "specific_gravity_high": 3.78,
+      "chemical_formula": "BeAl2O4",
+      "image": "images/gems/alexandrite.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Chrysoberyl Cat's Eye",
+      "hardness": 8.5,
+      "specific_gravity_low": 3.7,
+      "specific_gravity_high": 3.78,
+      "chemical_formula": "BeAl2O4",
+      "image": "../images/gems/chrysoberyl_catseye.png"
+    },
+    {
+      "id": 4,
+      "name": "Chrysoberyl",
+      "hardness": 8.5,
+      "specific_gravity_low": 3.7,
+      "specific_gravity_high": 3.78,
+      "chemical_formula": "BeAl2O4",
+      "image": "images/gems/chrysoberyl.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Blue Sapphire",
+      "hardness": 9,
+      "specific_gravity_low": 3.98,
+      "specific_gravity_high": 4.05,
+      "chemical_formula": "Al2O3",
+      "image": "images/gems/blue_sapphier.jpg"
+    },
+    {
+      "id": 6,
+      "name": "White Sapphire",
+      "hardness": 9,
+      "specific_gravity_low": 3.98,
+      "specific_gravity_high": 4.05,
+      "chemical_formula": "Al2O3",
+      "image": "images/gems/white_sapphire.webp"
+    },
+    {
+      "id": 7,
+      "name": "Yellow Sapphire",
+      "hardness": 9,
+      "specific_gravity_low": 3.98,
+      "specific_gravity_high": 4.05,
+      "chemical_formula": "Al2O3",
+      "image": "images/gems/yellow_sapphire.webp"
+    },
+    {
+      "id": 8,
+      "name": "Padparadscha Sapphire",
+      "hardness": 9,
+      "specific_gravity_low": 3.98,
+      "specific_gravity_high": 4.05,
+      "chemical_formula": "Al2O3",
+      "image": "images/gems/padparadscha.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Spessartite Garnet",
+      "hardness": 7.5,
+      "specific_gravity_low": 3.15,
+      "specific_gravity_high": 4.3,
+      "chemical_formula": "Mn3Al2(SiO4)3",
+      "image": "images/gems/spessartine.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Almandine Garnet",
+      "hardness": 7.5,
+      "specific_gravity_low": 3.1,
+      "specific_gravity_high": 4.3,
+      "chemical_formula": "Fe3Al2(SiO4)3",
+      "image": "images/gems/almandine.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Pyrope Garnet",
+      "hardness": 7.5,
+      "specific_gravity_low": 3.1,
+      "specific_gravity_high": 4.3,
+      "chemical_formula": "Mg3Al2(SiO4)3",
+      "image": "images/gems/pyrope.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Spinel",
+      "hardness": 7.5,
+      "specific_gravity_low": 3.54,
+      "specific_gravity_high": 4.62,
+      "chemical_formula": "MgAl2O4",
+      "image": "images/gems/spinel.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Cobalt Spinel",
+      "hardness": 7.5,
+      "specific_gravity_low": 3.34,
+      "specific_gravity_high": 3.62,
+      "chemical_formula": "MgAl2O4",
+      "image": "images/gems/cobalt_spinel.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Scholr",
+      "hardness": 7,
+      "specific_gravity_low": 3.06,
+      "specific_gravity_high": 3.08,
+      "chemical_formula": "NaFe3Al6(Si6O18)(BO3)3(OH)3OH",
+      "image": "images/gems/schorl.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Topaz",
+      "hardness": 8,
+      "specific_gravity_low": 3.49,
+      "specific_gravity_high": 3.57,
+      "chemical_formula": "Be3Al2(SiO3)6",
+      "image": "images/gems/topaz.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Zircon",
+      "hardness": 7.5,
+      "specific_gravity_low": 4.6,
+      "specific_gravity_high": 4.7,
+      "chemical_formula": "ZrSiO4",
+      "image": "images/gems/zircon.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Quartz",
+      "hardness": 7,
+      "specific_gravity_low": 2.59,
+      "specific_gravity_high": 2.63,
+      "chemical_formula": "SiO2",
+      "image": "images/gems/quartz.png"
+    },
+    {
+      "id": 18,
+      "name": "Amethyst",
+      "hardness": 7,
+      "specific_gravity_low": 2.59,
+      "specific_gravity_high": 2.63,
+      "chemical_formula": "SiO2",
+      "image": "images/gems/amethyst.png"
+    },
+    {
+      "id": 19,
+      "name": "Citrine",
+      "hardness": 7,
+      "specific_gravity_low": 2.59,
+      "specific_gravity_high": 2.63,
+      "chemical_formula": "SiO2",
+      "image": "images/gems/citrine.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Rose Quartz",
+      "hardness": 7,
+      "specific_gravity_low": 2.59,
+      "specific_gravity_high": 2.63,
+      "chemical_formula": "SiO2",
+      "image": "images/gems/rose_quartz.webp"
+    },
+    {
+      "id": 21,
+      "name": "Jedi Spinel",
+      "hardness": 7.5,
+      "specific_gravity_low": 3.54,
+      "specific_gravity_high": 3.62,
+      "chemical_formula": "MgAl2O4",
+      "image": "images/gems/jedi_spinel.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Tourmaline",
+      "hardness": 7,
+      "specific_gravity_low": 3.06,
+      "specific_gravity_high": 3.08,
+      "chemical_formula": "Na(Li,Al)3Al6(BO3)3Si6O18(OH)4",
+      "image": "images/gems/tourmaline.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Moonstone",
+      "hardness": 6,
+      "specific_gravity_low": 2.54,
+      "specific_gravity_high": 2.66,
+      "chemical_formula": "KAlSi3O8",
+      "image": "images/gems/moonstone.jpg"
+    }
+  ]
+}

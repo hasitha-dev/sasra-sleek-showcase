@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -71,17 +72,22 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display tracking-tight;
   }
 }
@@ -90,31 +96,31 @@
   .bg-glass {
     @apply bg-white bg-opacity-70 backdrop-blur-md shadow-glass border border-white border-opacity-20;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-navy to-gem-blue;
   }
-  
+
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-[1.02];
   }
-  
+
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-opacity-50;
   }
-  
+
   .card-hover {
     @apply transition-all duration-300 hover:shadow-card hover:-translate-y-1;
   }
-  
+
   .nav-link {
     @apply relative px-2 py-1 text-foreground/80 transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full;
   }
-  
+
   .nav-link-active {
     @apply text-foreground after:w-full;
   }
@@ -124,10 +130,8 @@
   .mask-image-gradient {
     mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
   }
-  
+
   .clip-diagonal {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
