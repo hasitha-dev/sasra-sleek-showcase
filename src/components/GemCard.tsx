@@ -1,3 +1,4 @@
+
 import React from "react";
 import { cn } from "@/lib/utils";
 import ContactWhatsApp from "./ContactWhatsApp";
@@ -28,6 +29,9 @@ const GemCard: React.FC<GemCardProps> = ({
   className,
   style,
 }) => {
+  // Remove the src prefix if present to avoid double path issues
+  const imagePath = image.startsWith("/src") ? image.substring(4) : image;
+  
   return (
     <div
       className={cn(
@@ -38,7 +42,7 @@ const GemCard: React.FC<GemCardProps> = ({
     >
       <div className="aspect-square overflow-hidden relative">
         <img
-          src={image}
+          src={imagePath}
           alt={name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"

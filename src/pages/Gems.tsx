@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+
+import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
@@ -7,9 +8,6 @@ import CallToAction from "@/components/CallToAction";
 import gems from "../../gem_details.json";
 
 const Gems = () => {
-  useEffect(() => {
-    console.log(gems);
-  }, []);
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
