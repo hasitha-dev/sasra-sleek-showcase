@@ -14,7 +14,6 @@ export interface GalleryItemProps {
 }
 
 const GalleryItem: React.FC<GalleryItemProps> = ({
-  id,
   title,
   category,
   imageSrc,
