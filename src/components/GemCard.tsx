@@ -24,7 +24,7 @@ const GemCard: React.FC<GemCardProps> = ({
   specific_gravity_low,
   specific_gravity_high,
   chemical_formula,
-  phone = "+12345678901",
+  phone = "+94771666215",
   className,
   style,
   onClick,
