@@ -47,6 +47,11 @@ import company_name_4 from "../images/company_name/company_name_4.jpg";
 import company_name_5 from "../images/company_name/company_name_5.jpg";
 import company_name_6 from "../images/company_name/company_name_6.jpg";
 import company_name_7 from "../images/company_name/company_name_7.jpg";
+import carpet_1 from "../images/carpet/carpet_1.jpg";
+import carpet_2 from "../images/carpet/carpet_2.jpg";
+import tinted_1 from "../images/tinted/tinted_1.jpg";
+import tinted_2 from "../images/tinted/tinted_2.jpg";
+import tinted_3 from "../images/tinted/tinted_3.jpg";
 
 const CounterAnimation = ({
   end,
@@ -377,6 +382,36 @@ const Gallery = () => {
       category: "company-names",
       imageSrc: company_name_7,
     },
+    {
+      id: "ss042",
+      title: "Carpet Signage",
+      category: "carpet",
+      imageSrc: carpet_1,
+    },
+    {
+      id: "ss043",
+      title: "Carpet Signage",
+      category: "carpet",
+      imageSrc: carpet_2,
+    },
+    {
+      id: "ss044",
+      title: "Tinted Signage",
+      category: "tinted",
+      imageSrc: tinted_1,
+    },
+    {
+      id: "ss045",
+      title: "Tinted Signage",
+      category: "tinted",
+      imageSrc: tinted_2,
+    },
+    {
+      id: "ss046",
+      title: "Tinted Signage",
+      category: "tinted",
+      imageSrc: tinted_3,
+    },
   ];
 
   const filteredItems =
@@ -384,13 +419,16 @@ const Gallery = () => {
       ? galleryItems
       : galleryItems.filter((item) => item.category === activeFilter);
 
-  const categoryCounts = galleryItems.reduce<Record<FilterCategory, number>>((acc, item) => {
-    if (!acc[item.category]) {
-      acc[item.category] = 0;
-    }
-    acc[item.category]++;
-    return acc;
-  }, {} as Record<FilterCategory, number>);
+  const categoryCounts = galleryItems.reduce<Record<FilterCategory, number>>(
+    (acc, item) => {
+      if (!acc[item.category]) {
+        acc[item.category] = 0;
+      }
+      acc[item.category]++;
+      return acc;
+    },
+    {} as Record<FilterCategory, number>
+  );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -419,19 +457,25 @@ const Gallery = () => {
             setActiveFilter={handleFilterChange}
             className="mb-12"
           />
-          
+
           {activeFilter === "all" && (
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">All Categories</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {Object.entries(categoryCounts).map(([category, count]) => (
-                  <div 
-                    key={category} 
-                    onClick={() => handleFilterChange(category as FilterCategory)}
+                  <div
+                    key={category}
+                    onClick={() =>
+                      handleFilterChange(category as FilterCategory)
+                    }
                     className="bg-muted p-4 rounded-lg text-center cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
-                    <div className="font-medium capitalize">{category.replace(/-/g, " ")}</div>
-                    <div className="text-sm text-muted-foreground">{count} items</div>
+                    <div className="font-medium capitalize">
+                      {category.replace(/-/g, " ")}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {count} items
+                    </div>
                   </div>
                 ))}
               </div>

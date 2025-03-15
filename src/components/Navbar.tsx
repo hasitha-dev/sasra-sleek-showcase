@@ -1,9 +1,8 @@
-
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useIsMobile } from '@/hooks/use-mobile';
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,21 +20,21 @@ const Navbar: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/gems', label: 'Gem Collection' },
-    { to: '/gallery', label: 'Gallery' },
+    { to: "/", label: "Home" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/gems", label: "Gem Collection" },
   ];
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300',
-        scrolled ? 'bg-glass py-3' : 'bg-transparent py-4'
+        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300",
+        scrolled ? "bg-glass py-3" : "bg-transparent py-4"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -51,8 +50,8 @@ const Navbar: React.FC = () => {
             <NavLink
               key={link.to}
               to={link.to}
-              className={({ isActive }) => 
-                cn('nav-link', isActive && 'nav-link-active')
+              className={({ isActive }) =>
+                cn("nav-link", isActive && "nav-link-active")
               }
               end
             >
@@ -62,7 +61,7 @@ const Navbar: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-primary focus-ring rounded-full p-1"
           onClick={toggleMobileMenu}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -73,19 +72,22 @@ const Navbar: React.FC = () => {
         {/* Mobile Navigation */}
         <div
           className={cn(
-            'fixed inset-0 bg-background z-50 md:hidden transition-transform duration-300 ease-in-out',
-            mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            "fixed inset-0 bg-background z-50 md:hidden transition-transform duration-300 ease-in-out",
+            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
-          style={{ top: '60px' }}
+          style={{ top: "60px" }}
         >
           <nav className="flex flex-col space-y-6 p-6 pt-8">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
-                className={({ isActive }) => 
-                  cn('text-xl font-medium transition-colors', 
-                    isActive ? 'text-primary' : 'text-foreground/70 hover:text-foreground'
+                className={({ isActive }) =>
+                  cn(
+                    "text-xl font-medium transition-colors",
+                    isActive
+                      ? "text-primary"
+                      : "text-foreground/70 hover:text-foreground"
                   )
                 }
                 onClick={closeMobileMenu}

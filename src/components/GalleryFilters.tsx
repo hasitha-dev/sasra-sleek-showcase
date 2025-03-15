@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -9,7 +8,9 @@ export type FilterCategory =
   | "stainless-name"
   | "arcylic"
   | "badges"
-  | "brass-etching";
+  | "brass-etching"
+  | "carpet"
+  | "tinted";
 
 interface GalleryFiltersProps {
   activeFilter: FilterCategory;
@@ -30,6 +31,8 @@ const GalleryFilters: React.FC<GalleryFiltersProps> = ({
     { value: "arcylic", label: "Arcylic" },
     { value: "badges", label: "Badges" },
     { value: "brass-etching", label: "Brass Etching" },
+    { value: "carpet", label: "Carpet" },
+    { value: "tinted", label: "Tinted" },
   ];
 
   return (
