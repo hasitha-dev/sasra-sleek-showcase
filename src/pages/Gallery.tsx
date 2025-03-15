@@ -129,7 +129,6 @@ const Gallery = () => {
     id: string;
     title: string;
     category: FilterCategory;
-    subcategory: string;
     imageSrc: string;
   };
 
@@ -428,22 +427,6 @@ const Gallery = () => {
       ? galleryItems
       : galleryItems.filter((item) => item.category === activeFilter);
 
-  const groupedItems = filteredItems.reduce((acc, item) => {
-    const subcategory = item.subcategory as string;
-    if (!acc[subcategory]) {
-      acc[subcategory] = [];
-    }
-    acc[subcategory].push(item);
-    return acc;
-  }, {} as Record<string, typeof galleryItems>);
-
-  const formatSubcategory = (subcategory: string) => {
-    return subcategory
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -472,40 +455,18 @@ const Gallery = () => {
             className="mb-12"
           />
 
-          {activeFilter === "all" ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.map((item, index) => (
-                <GalleryItem
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  category={item.category}
-                  imageSrc={item.imageSrc}
-                  className="animate-slide-up opacity-0"
-                />
-              ))}
-            </div>
-          ) : (
-            Object.entries(groupedItems).map(([subcategory, items]) => (
-              <div key={subcategory} className="mb-12">
-                <h3 className="text-2xl font-bold mb-6 pb-2 border-b border-muted">
-                  {formatSubcategory(subcategory)}
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {items.map((item) => (
-                    <GalleryItem
-                      key={item.id}
-                      id={item.id}
-                      title={item.title}
-                      category={item.category}
-                      imageSrc={item.imageSrc}
-                      className="animate-slide-up opacity-0"
-                    />
-                  ))}
-                </div>
-              </div>
-            ))
-          )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredItems.map((item) => (
+              <GalleryItem
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                category={item.category}
+                imageSrc={item.imageSrc}
+                className="animate-slide-up opacity-0"
+              />
+            ))}
+          </div>
 
           {filteredItems.length === 0 && (
             <div className="text-center py-20">
