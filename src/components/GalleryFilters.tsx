@@ -8,8 +8,7 @@ export type FilterCategory =
   | "stainless-name"
   | "arcylic"
   | "badges"
-  | "brass-etching"
-  | "gems";
+  | "brass-etching";
 
 interface GalleryFiltersProps {
   activeFilter: FilterCategory;
@@ -30,7 +29,6 @@ const GalleryFilters: React.FC<GalleryFiltersProps> = ({
     { value: "arcylic", label: "Arcylic" },
     { value: "badges", label: "Badges" },
     { value: "brass-etching", label: "Brass Etching" },
-    { value: "gems", label: "Gem Collection" },
   ];
 
   return (

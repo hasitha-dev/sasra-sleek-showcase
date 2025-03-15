@@ -6,7 +6,6 @@ import PageHeader from "@/components/PageHeader";
 import GalleryFilters, { FilterCategory } from "@/components/GalleryFilters";
 import GalleryItem from "@/components/GalleryItem";
 import CallToAction from "@/components/CallToAction";
-import { motion } from "framer-motion";
 import name_board_1 from "../images/stainless_name/name_board_1.jpg";
 import name_board_2 from "../images/stainless_name/name_board_2.jpg";
 import name_board_3 from "../images/stainless_name/name_board_3.jpg";
