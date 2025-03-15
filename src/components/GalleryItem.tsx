@@ -20,7 +20,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
   return (
     <div
       className={cn(
-        "group cursor-pointer overflow-hidden rounded-lg",
+        "group cursor-pointer overflow-hidden rounded-lg relative",
         className
       )}
     >

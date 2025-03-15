@@ -109,8 +109,7 @@ const Gallery = () => {
         filterParam === "stainless-name" ||
         filterParam === "arcylic" ||
         filterParam === "badges" ||
-        filterParam === "brass-etching" ||
-        filterParam === "gems")
+        filterParam === "brass-etching")
     ) {
       setActiveFilter(filterParam);
     }
@@ -385,6 +384,14 @@ const Gallery = () => {
       ? galleryItems
       : galleryItems.filter((item) => item.category === activeFilter);
 
+  const categoryCounts = galleryItems.reduce<Record<FilterCategory, number>>((acc, item) => {
+    if (!acc[item.category]) {
+      acc[item.category] = 0;
+    }
+    acc[item.category]++;
+    return acc;
+  }, {} as Record<FilterCategory, number>);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -412,6 +419,24 @@ const Gallery = () => {
             setActiveFilter={handleFilterChange}
             className="mb-12"
           />
+          
+          {activeFilter === "all" && (
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold mb-6">All Categories</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {Object.entries(categoryCounts).map(([category, count]) => (
+                  <div 
+                    key={category} 
+                    onClick={() => handleFilterChange(category as FilterCategory)}
+                    className="bg-muted p-4 rounded-lg text-center cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <div className="font-medium capitalize">{category.replace(/-/g, " ")}</div>
+                    <div className="text-sm text-muted-foreground">{count} items</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map((item) => (
