@@ -245,7 +245,6 @@ const Gems = () => {
                 {...gem}
                 className="animate-slide-up opacity-0"
                 style={{ animationDelay: `${0.1 * (index % 3)}s` }}
-                onClick={() => handleGemClick(gem)}
               />
             ))}
           </div>

@@ -1,8 +1,15 @@
+import React from "react";
+import { cn } from "@/lib/utils";
 
-import React from 'react';
-import { cn } from '@/lib/utils';
-
-export type FilterCategory = 'all' | 'stainless-steel' | 'plastic-signage' | 'sticker-works' | 'gems';
+export type FilterCategory =
+  | "all"
+  | "stainless-etching"
+  | "company-names"
+  | "stainless-name"
+  | "arcylic"
+  | "badges"
+  | "brass-etching"
+  | "gems";
 
 interface GalleryFiltersProps {
   activeFilter: FilterCategory;
@@ -16,11 +23,14 @@ const GalleryFilters: React.FC<GalleryFiltersProps> = ({
   className,
 }) => {
   const filters: { value: FilterCategory; label: string }[] = [
-    { value: 'all', label: 'All Works' },
-    { value: 'stainless-steel', label: 'Stainless Steel' },
-    { value: 'plastic-signage', label: 'Plastic Signage' },
-    { value: 'sticker-works', label: 'Sticker Works' },
-    { value: 'gems', label: 'Gem Collection' },
+    { value: "all", label: "All Works" },
+    { value: "stainless-etching", label: "Stainless Etching" },
+    { value: "company-names", label: "Company Names" },
+    { value: "stainless-name", label: "Stainless Name" },
+    { value: "arcylic", label: "Arcylic" },
+    { value: "badges", label: "Badges" },
+    { value: "brass-etching", label: "Brass Etching" },
+    { value: "gems", label: "Gem Collection" },
   ];
 
   return (
