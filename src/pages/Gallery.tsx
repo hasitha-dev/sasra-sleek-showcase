@@ -7,6 +7,47 @@ import GalleryFilters, { FilterCategory } from "@/components/GalleryFilters";
 import GalleryItem from "@/components/GalleryItem";
 import CallToAction from "@/components/CallToAction";
 import { motion } from "framer-motion";
+import name_board_1 from "../images/stainless_name/name_board_1.jpg";
+import name_board_2 from "../images/stainless_name/name_board_2.jpg";
+import name_board_3 from "../images/stainless_name/name_board_3.jpg";
+import name_board_4 from "../images/stainless_name/name_board_4.jpg";
+import name_board_5 from "../images/stainless_name/name_board_5.jpg";
+import name_board_6 from "../images/stainless_name/name_board_6.jpg";
+import name_board_7 from "../images/stainless_name/name_board_7.jpg";
+import name_board_8 from "../images/stainless_name/name_board_8.jpg";
+import name_board_9 from "../images/stainless_name/name_board_9.jpg";
+import steel_etching_1 from "../images/stainless_etching/steel_etching_1.jpg";
+import steel_etching_2 from "../images/stainless_etching/steel_etching_2.jpg";
+import steel_etching_3 from "../images/stainless_etching/steel_etching_3.jpg";
+import steel_etching_4 from "../images/stainless_etching/steel_etching_4.jpg";
+import steel_etching_5 from "../images/stainless_etching/steel_etching_5.jpg";
+import steel_etching_6 from "../images/stainless_etching/steel_etching_6.jpg";
+import steel_etching_7 from "../images/stainless_etching/steel_etching_7.jpg";
+import steel_etching_8 from "../images/stainless_etching/steel_etching_8.jpg";
+import arcylic_1 from "../images/arcylic/arcylic_1.jpg";
+import arcylic_2 from "../images/arcylic/arcylic_2.jpg";
+import arcylic_3 from "../images/arcylic/arcylic_3.jpg";
+import arcylic_4 from "../images/arcylic/arcylic_4.jpg";
+import badges_1 from "../images/badges/badge_1.jpg";
+import badges_2 from "../images/badges/badge_2.jpg";
+import badges_3 from "../images/badges/badge_3.jpg";
+import badges_4 from "../images/badges/badge_4.jpg";
+import badges_5 from "../images/badges/badge_5.jpg";
+import badges_6 from "../images/badges/badge_6.jpg";
+import badges_7 from "../images/badges/badge_7.jpg";
+import brass_etching_1 from "../images/brass_etching/brass_etching_1.jpg";
+import brass_etching_2 from "../images/brass_etching/brass_etching_2.jpg";
+import brass_etching_3 from "../images/brass_etching/brass_etching_3.jpg";
+import brass_etching_4 from "../images/brass_etching/brass_etching_4.jpg";
+import brass_etching_5 from "../images/brass_etching/brass_etching_5.jpg";
+import brass_etching_6 from "../images/brass_etching/brass_etching_6.jpg";
+import company_name_1 from "../images/company_name/company_name_1.jpg";
+import company_name_2 from "../images/company_name/company_name_2.jpg";
+import company_name_3 from "../images/company_name/company_name_3.jpg";
+import company_name_4 from "../images/company_name/company_name_4.jpg";
+import company_name_5 from "../images/company_name/company_name_5.jpg";
+import company_name_6 from "../images/company_name/company_name_6.jpg";
+import company_name_7 from "../images/company_name/company_name_7.jpg";
 
 const CounterAnimation = ({
   end,
@@ -97,9 +138,288 @@ const Gallery = () => {
       id: "ss001",
       title: "House Number Plate",
       category: "stainless-name",
-      subcategory: "house-number",
-      imageSrc:
-        "https://images.unsplash.com/photo-1527767013444-3551422e5eec?auto=format&fit=crop&q=80&w=2070",
+      subcategory: "house-name",
+      imageSrc: name_board_1,
+    },
+    {
+      id: "ss002",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_2,
+    },
+    {
+      id: "ss003",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_3,
+    },
+    {
+      id: "ss004",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_4,
+    },
+    {
+      id: "ss005",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_5,
+    },
+    {
+      id: "ss006",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_6,
+    },
+    {
+      id: "ss007",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_7,
+    },
+    {
+      id: "ss008",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_8,
+    },
+    {
+      id: "ss009",
+      title: "House Name Plate",
+      category: "stainless-name",
+      subcategory: "house-name",
+      imageSrc: name_board_9,
+    },
+    {
+      id: "ss010",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_1,
+    },
+    {
+      id: "ss011",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_2,
+    },
+    {
+      id: "ss012",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_3,
+    },
+    {
+      id: "ss013",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_4,
+    },
+    {
+      id: "ss014",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_5,
+    },
+    {
+      id: "ss015",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_6,
+    },
+    {
+      id: "ss016",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_7,
+    },
+    {
+      id: "ss017",
+      title: "Steel Etching",
+      category: "stainless-etching",
+      subcategory: "steel-etching",
+      imageSrc: steel_etching_8,
+    },
+    {
+      id: "ss018",
+      title: "Arcylic Signage",
+      category: "arcylic",
+      subcategory: "arcylic-signage",
+      imageSrc: arcylic_1,
+    },
+    {
+      id: "ss019",
+      title: "Arcylic Signage",
+      category: "arcylic",
+      subcategory: "arcylic-signage",
+      imageSrc: arcylic_2,
+    },
+    {
+      id: "ss020",
+      title: "Arcylic Signage",
+      category: "arcylic",
+      subcategory: "arcylic-signage",
+      imageSrc: arcylic_3,
+    },
+    {
+      id: "ss021",
+      title: "Arcylic Signage",
+      category: "arcylic",
+      subcategory: "arcylic-signage",
+      imageSrc: arcylic_4,
+    },
+    {
+      id: "ss022",
+      title: "Badges",
+      category: "badges",
+      subcategory: "badges",
+      imageSrc: badges_1,
+    },
+    {
+      id: "ss023",
+      title: "Badges",
+      category: "badges",
+      subcategory: "badges",
+      imageSrc: badges_2,
+    },
+    {
+      id: "ss024",
+      title: "Badges",
+      category: "badges",
+      subcategory: "badges",
+      imageSrc: badges_3,
+    },
+    {
+      id: "ss025",
+      title: "Badges",
+      category: "badges",
+      subcategory: "badges",
+      imageSrc: badges_4,
+    },
+    {
+      id: "ss026",
+      title: "Badges",
+      category: "badges",
+      subcategory: "badges",
+      imageSrc: badges_5,
+    },
+    {
+      id: "ss027",
+      title: "Badges",
+      category: "badges",
+      subcategory: "badges",
+      imageSrc: badges_6,
+    },
+    {
+      id: "ss028",
+      title: "Badges",
+      category: "badges",
+      subcategory: "badges",
+      imageSrc: badges_7,
+    },
+    {
+      id: "ss029",
+      title: "Brass Etching",
+      category: "brass-etching",
+      subcategory: "brass-etching",
+      imageSrc: brass_etching_1,
+    },
+    {
+      id: "ss030",
+      title: "Brass Etching",
+      category: "brass-etching",
+      subcategory: "brass-etching",
+      imageSrc: brass_etching_2,
+    },
+    {
+      id: "ss031",
+      title: "Brass Etching",
+      category: "brass-etching",
+      subcategory: "brass-etching",
+      imageSrc: brass_etching_3,
+    },
+    {
+      id: "ss032",
+      title: "Brass Etching",
+      category: "brass-etching",
+      subcategory: "brass-etching",
+      imageSrc: brass_etching_4,
+    },
+    {
+      id: "ss033",
+      title: "Brass Etching",
+      category: "brass-etching",
+      subcategory: "brass-etching",
+      imageSrc: brass_etching_5,
+    },
+    {
+      id: "ss034",
+      title: "Brass Etching",
+      category: "brass-etching",
+      subcategory: "brass-etching",
+      imageSrc: brass_etching_6,
+    },
+    {
+      id: "ss035",
+      title: "Company Name Plate",
+      category: "company-names",
+      subcategory: "company-name",
+      imageSrc: company_name_1,
+    },
+    {
+      id: "ss036",
+      title: "Company Name Plate",
+      category: "company-names",
+      subcategory: "company-name",
+      imageSrc: company_name_2,
+    },
+    {
+      id: "ss037",
+      title: "Company Name Plate",
+      category: "company-names",
+      subcategory: "company-name",
+      imageSrc: company_name_3,
+    },
+    {
+      id: "ss038",
+      title: "Company Name Plate",
+      category: "company-names",
+      subcategory: "company-name",
+      imageSrc: company_name_4,
+    },
+    {
+      id: "ss039",
+      title: "Company Name Plate",
+      category: "company-names",
+      subcategory: "company-name",
+      imageSrc: company_name_5,
+    },
+    {
+      id: "ss040",
+      title: "Company Name Plate",
+      category: "company-names",
+      subcategory: "company-name",
+      imageSrc: company_name_6,
+    },
+    {
+      id: "ss041",
+      title: "Company Name Plate",
+      category: "company-names",
+      subcategory: "company-name",
+      imageSrc: company_name_7,
     },
   ];
 
