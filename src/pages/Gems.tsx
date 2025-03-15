@@ -222,7 +222,7 @@ const Gems = () => {
       <PageHeader
         title="Exquisite Gem Collection"
         subtitle="Discover our handpicked selection of rare and precious gemstones from around the world."
-        backgroundImage="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&q=80&w=2070"
+        backgroundImage="https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1920"
       />
 
       <section className="py-16 md:py-24">

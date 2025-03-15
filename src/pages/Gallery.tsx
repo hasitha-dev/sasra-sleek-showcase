@@ -437,7 +437,7 @@ const Gallery = () => {
       <PageHeader
         title="Our Gallery"
         subtitle="Explore our portfolio of premium stainless steel advertising, signage solutions, and exquisite gem collection."
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2070"
+        backgroundImage="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1920"
       />
 
       <section className="py-16 bg-muted/20">
@@ -567,3 +567,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
