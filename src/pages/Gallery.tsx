@@ -83,7 +83,7 @@ const Gallery = () => {
       title: "House Number Plate",
       category: "stainless-steel",
       subcategory: "house-number",
-      imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1527767013444-3551422e5eec?auto=format&fit=crop&q=80&w=2070",
       description: "Premium stainless steel house number plate, featuring brushed finish with illuminated numbering."
     },
     {
@@ -91,7 +91,7 @@ const Gallery = () => {
       title: "Etched Name Plate",
       category: "stainless-steel",
       subcategory: "etching-name",
-      imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1574883052806-413e0927a4d7?auto=format&fit=crop&q=80&w=2070",
       description: "Elegant stainless steel etched name plate with polished finish and precision-cut lettering."
     },
     {
@@ -99,7 +99,7 @@ const Gallery = () => {
       title: "Stainless Steel Name Board",
       category: "stainless-steel",
       subcategory: "name-board",
-      imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1606044466411-207a9a49711f?auto=format&fit=crop&q=80&w=2070",
       description: "Custom stainless steel name board featuring backlit effects and mirror-polished finish."
     },
     {
@@ -107,7 +107,7 @@ const Gallery = () => {
       title: "Steel Name Badge",
       category: "stainless-steel",
       subcategory: "name-tag",
-      imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1580136579312-94651dfd596d?auto=format&fit=crop&q=80&w=2070",
       description: "Professional stainless steel name badge with magnetic backing and etched details."
     },
     {
@@ -115,7 +115,7 @@ const Gallery = () => {
       title: "Brass Etched Nameplate",
       category: "stainless-steel",
       subcategory: "brass-etching",
-      imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1573318075086-a3f9db499acd?auto=format&fit=crop&q=80&w=2070",
       description: "Luxurious brass etched nameplate for executive offices with deep etching and polished finish."
     },
     {
@@ -123,7 +123,7 @@ const Gallery = () => {
       title: "Brass Name Board",
       category: "stainless-steel",
       subcategory: "brass-board",
-      imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1619642990318-1897eae6d449?auto=format&fit=crop&q=80&w=2070",
       description: "Elegant brass name board for professional establishments with antique finish options."
     },
     
@@ -132,7 +132,7 @@ const Gallery = () => {
       title: "Acrylic Name Board",
       category: "plastic-signage",
       subcategory: "acrylic-board",
-      imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=2070",
       description: "Modern acrylic name board using premium materials with digital printing and sleek design."
     },
     {
@@ -140,7 +140,7 @@ const Gallery = () => {
       title: "Common Signage Board",
       category: "plastic-signage",
       subcategory: "common-signage",
-      imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=2070",
       description: "Versatile common signage boards for commercial spaces using durable plastic materials."
     },
     {
@@ -148,7 +148,7 @@ const Gallery = () => {
       title: "Company Logo Board",
       category: "plastic-signage",
       subcategory: "company-logo",
-      imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&q=80&w=2070",
       description: "Eye-catching company logo boards using high-quality plastic with full-color printing."
     },
     {
@@ -156,7 +156,7 @@ const Gallery = () => {
       title: "Company Name Board",
       category: "plastic-signage",
       subcategory: "company-name",
-      imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1493421419110-74f4e85ba126?auto=format&fit=crop&q=80&w=2070",
       description: "Professional company name boards with custom sizing and mounting options."
     },
     {
@@ -164,7 +164,7 @@ const Gallery = () => {
       title: "Plastic Badge",
       category: "plastic-signage",
       subcategory: "plastic-badge",
-      imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&q=80&w=2070",
       description: "Lightweight and durable plastic badges for conferences, events, and corporate use."
     },
     
@@ -173,7 +173,7 @@ const Gallery = () => {
       title: "Digital Printed Sticker",
       category: "sticker-works",
       subcategory: "digital-printing",
-      imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1632964660198-f846460dbcdd?auto=format&fit=crop&q=80&w=2070",
       description: "High-resolution digitally printed stickers with vibrant colors and detailed graphics."
     },
     {
@@ -181,7 +181,7 @@ const Gallery = () => {
       title: "Sandblast Glass Sticker",
       category: "sticker-works",
       subcategory: "sandblast-tinted",
-      imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2070",
+      imageSrc: "https://images.unsplash.com/photo-1534705867302-2a41394d2a3b?auto=format&fit=crop&q=80&w=2070",
       description: "Elegant sandblast and tinted glass stickers for office partitions and decorative purposes."
     },
     
@@ -190,7 +190,7 @@ const Gallery = () => {
       title: "Ceylon Blue Sapphire",
       category: "gems",
       subcategory: "sapphire",
-      imageSrc: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1756",
+      imageSrc: "https://images.unsplash.com/photo-1551751299-1b51cab2694c?auto=format&fit=crop&q=80&w=1756",
       description: "Exquisite 2.5 carat blue sapphire from Sri Lanka, known for its vivid blue color and exceptional clarity."
     },
     {
@@ -198,7 +198,7 @@ const Gallery = () => {
       title: "Colombian Emerald",
       category: "gems",
       subcategory: "emerald",
-      imageSrc: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1756",
+      imageSrc: "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&q=80&w=1756",
       description: "Stunning 1.8 carat emerald from Colombia with a rich green color and excellent transparency."
     },
     {
@@ -206,7 +206,7 @@ const Gallery = () => {
       title: "Burmese Ruby",
       category: "gems",
       subcategory: "ruby",
-      imageSrc: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1756",
+      imageSrc: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=1756",
       description: "Magnificent 1.5 carat ruby from Burma with a rich 'pigeon blood' red color that's highly valued."
     },
   ];
