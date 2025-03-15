@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { NavLink } from 'react-router-dom';
@@ -10,6 +9,7 @@ interface ServiceCardProps {
   imageSrc: string;
   to: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -18,12 +18,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageSrc,
   to,
   className,
+  style,
 }) => {
   return (
-    <div className={cn(
-      "group relative bg-white rounded-lg overflow-hidden card-hover border border-border/40",
-      className
-    )}>
+    <div 
+      className={cn(
+        "group relative bg-white rounded-lg overflow-hidden card-hover border border-border/40",
+        className
+      )}
+      style={style}
+    >
       <div className="relative aspect-video overflow-hidden">
         <img 
           src={imageSrc} 

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -62,7 +61,6 @@ const Gallery = () => {
   const handleFilterChange = (filter: FilterCategory) => {
     setActiveFilter(filter);
     
-    // Update URL without reloading page
     const newUrl = filter === 'all' 
       ? '/gallery' 
       : `/gallery?filter=${filter}`;
@@ -70,8 +68,16 @@ const Gallery = () => {
     navigate(newUrl, { replace: true });
   };
   
-  const galleryItems = [
-    // Stainless Steel - House Number Plates
+  type GalleryItemType = {
+    id: string;
+    title: string;
+    category: FilterCategory;
+    subcategory: string;
+    imageSrc: string;
+    description: string;
+  };
+  
+  const galleryItems: GalleryItemType[] = [
     {
       id: "ss001",
       title: "House Number Plate",
@@ -80,7 +86,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
       description: "Premium stainless steel house number plate, featuring brushed finish with illuminated numbering."
     },
-    // Stainless Steel - Etching Name Plates
     {
       id: "ss002",
       title: "Etched Name Plate",
@@ -89,7 +94,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
       description: "Elegant stainless steel etched name plate with polished finish and precision-cut lettering."
     },
-    // Stainless Steel - Name Boards
     {
       id: "ss003",
       title: "Stainless Steel Name Board",
@@ -98,7 +102,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
       description: "Custom stainless steel name board featuring backlit effects and mirror-polished finish."
     },
-    // Stainless Steel - Name Tag/Badges
     {
       id: "ss004",
       title: "Steel Name Badge",
@@ -107,7 +110,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
       description: "Professional stainless steel name badge with magnetic backing and etched details."
     },
-    // Brass - Etching Name Plates
     {
       id: "br001",
       title: "Brass Etched Nameplate",
@@ -116,7 +118,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=2070",
       description: "Luxurious brass etched nameplate for executive offices with deep etching and polished finish."
     },
-    // Brass - Name Boards and Badges
     {
       id: "br002",
       title: "Brass Name Board",
@@ -126,7 +127,6 @@ const Gallery = () => {
       description: "Elegant brass name board for professional establishments with antique finish options."
     },
     
-    // Plastic Signage - Acrylic Name Boards
     {
       id: "ps001",
       title: "Acrylic Name Board",
@@ -135,7 +135,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
       description: "Modern acrylic name board using premium materials with digital printing and sleek design."
     },
-    // Plastic Signage - Common Signage Boards
     {
       id: "ps002",
       title: "Common Signage Board",
@@ -144,7 +143,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
       description: "Versatile common signage boards for commercial spaces using durable plastic materials."
     },
-    // Plastic Signage - Company Logo Boards
     {
       id: "ps003",
       title: "Company Logo Board",
@@ -153,7 +151,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
       description: "Eye-catching company logo boards using high-quality plastic with full-color printing."
     },
-    // Plastic Signage - Company Name Boards
     {
       id: "ps004",
       title: "Company Name Board",
@@ -162,7 +159,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2070",
       description: "Professional company name boards with custom sizing and mounting options."
     },
-    // Plastic Signage - Plastic Badges
     {
       id: "ps005",
       title: "Plastic Badge",
@@ -172,7 +168,6 @@ const Gallery = () => {
       description: "Lightweight and durable plastic badges for conferences, events, and corporate use."
     },
     
-    // Sticker Works - Digital Printing
     {
       id: "sw001",
       title: "Digital Printed Sticker",
@@ -181,7 +176,6 @@ const Gallery = () => {
       imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2070",
       description: "High-resolution digitally printed stickers with vibrant colors and detailed graphics."
     },
-    // Sticker Works - Sandblast & Tinted Glass Stickers
     {
       id: "sw002",
       title: "Sandblast Glass Sticker",
@@ -191,7 +185,6 @@ const Gallery = () => {
       description: "Elegant sandblast and tinted glass stickers for office partitions and decorative purposes."
     },
     
-    // Gems
     {
       id: "gem001",
       title: "Ceylon Blue Sapphire",
@@ -222,16 +215,15 @@ const Gallery = () => {
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeFilter);
 
-  // Group items by subcategory when a specific category is selected
   const groupedItems = filteredItems.reduce((acc, item) => {
-    if (!acc[item.subcategory]) {
-      acc[item.subcategory] = [];
+    const subcategory = item.subcategory as string;
+    if (!acc[subcategory]) {
+      acc[subcategory] = [];
     }
-    acc[item.subcategory].push(item);
+    acc[subcategory].push(item);
     return acc;
   }, {} as Record<string, typeof galleryItems>);
 
-  // Create formatted subcategory names for display
   const formatSubcategory = (subcategory: string) => {
     return subcategory
       .split('-')
@@ -249,7 +241,6 @@ const Gallery = () => {
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2070"
       />
 
-      {/* Counter statistics section */}
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-4 md:gap-10">

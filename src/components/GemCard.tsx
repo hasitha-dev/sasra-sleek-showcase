@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import ContactWhatsApp from './ContactWhatsApp';
@@ -13,6 +12,7 @@ interface GemCardProps {
   origin?: string;
   phone?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const GemCard: React.FC<GemCardProps> = ({
@@ -25,12 +25,16 @@ const GemCard: React.FC<GemCardProps> = ({
   origin,
   phone = "+12345678901",
   className,
+  style,
 }) => {
   return (
-    <div className={cn(
-      "group bg-white rounded-xl overflow-hidden card-hover",
-      className
-    )}>
+    <div 
+      className={cn(
+        "group bg-white rounded-xl overflow-hidden card-hover",
+        className
+      )}
+      style={style}
+    >
       <div className="aspect-square overflow-hidden relative">
         <img 
           src={imageSrc} 
