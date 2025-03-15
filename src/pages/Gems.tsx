@@ -1,13 +1,38 @@
 
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import GemCard from "@/components/GemCard";
 import CallToAction from "@/components/CallToAction";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import gems from "../../gem_details.json";
 
 const Gems = () => {
+  const [selectedGem, setSelectedGem] = useState<(typeof gems.gems)[0] | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  // Sample stainless steel images for demonstration
+  const stainlessImages = [
+    "/src/images/stainless_etching/steel_etching_1.jpg",
+    "/src/images/stainless_etching/steel_etching_2.jpg",
+    "/src/images/stainless_etching/steel_etching_3.jpg",
+    "/src/images/stainless_etching/steel_etching_4.jpg",
+  ];
+
+  const stainlessNameImages = [
+    "/src/images/stainless_name/name_board_1.jpg",
+    "/src/images/stainless_name/name_board_2.jpg",
+    "/src/images/stainless_name/name_board_3.jpg",
+    "/src/images/stainless_name/name_board_4.jpg",
+  ];
+
+  const handleGemClick = (gem: (typeof gems.gems)[0]) => {
+    setSelectedGem(gem);
+    setIsDialogOpen(true);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -38,11 +63,59 @@ const Gems = () => {
                 {...gem}
                 className="animate-slide-up opacity-0"
                 style={{ animationDelay: `${0.1 * (index % 3)}s` }}
+                onClick={() => handleGemClick(gem)}
               />
             ))}
           </div>
         </div>
       </section>
+
+      {/* Stainless steel examples dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-4xl">
+          <DialogHeader>
+            <DialogTitle>{selectedGem?.name} - Stainless Steel Examples</DialogTitle>
+            <DialogDescription>
+              View examples of stainless steel work that can be customized with this gem.
+            </DialogDescription>
+          </DialogHeader>
+          
+          <Tabs defaultValue="etching" className="w-full">
+            <TabsList className="w-full justify-start mb-4">
+              <TabsTrigger value="etching">Stainless Steel Etching</TabsTrigger>
+              <TabsTrigger value="nameboards">Name Boards</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="etching" className="mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {stainlessImages.map((img, index) => (
+                  <div key={index} className="overflow-hidden rounded-lg">
+                    <img 
+                      src={img} 
+                      alt={`Stainless steel etching example ${index + 1}`} 
+                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="nameboards" className="mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {stainlessNameImages.map((img, index) => (
+                  <div key={index} className="overflow-hidden rounded-lg">
+                    <img 
+                      src={img} 
+                      alt={`Stainless steel name board example ${index + 1}`} 
+                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
+        </DialogContent>
+      </Dialog>
 
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6">

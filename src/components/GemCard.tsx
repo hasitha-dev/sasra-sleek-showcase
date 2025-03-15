@@ -15,6 +15,7 @@ interface GemCardProps {
   phone?: string;
   className?: string;
   style?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 const GemCard: React.FC<GemCardProps> = ({
@@ -28,6 +29,7 @@ const GemCard: React.FC<GemCardProps> = ({
   phone = "+12345678901",
   className,
   style,
+  onClick,
 }) => {
   // Remove the src prefix if present to avoid double path issues
   const imagePath = image.startsWith("/src") ? image.substring(4) : image;
@@ -35,10 +37,11 @@ const GemCard: React.FC<GemCardProps> = ({
   return (
     <div
       className={cn(
-        "group bg-white rounded-xl overflow-hidden card-hover",
+        "group bg-white rounded-xl overflow-hidden card-hover cursor-pointer",
         className
       )}
       style={style}
+      onClick={onClick}
     >
       <div className="aspect-square overflow-hidden relative">
         <img
