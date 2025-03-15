@@ -48,14 +48,15 @@ const GemCard: React.FC<GemCardProps> = ({
       <div className="p-5">
         <h3 className="text-xl font-display font-semibold">{name}</h3>
 
-        {/* Advanced Properties */}
         {(hardness || specific_gravity_low || chemical_formula) && (
           <>
             <Separator className="my-3" />
             <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
               {hardness && (
                 <div>
-                  <span className="font-medium text-foreground">Hardness:</span>{" "}
+                  <span className="font-medium text-foreground">
+                    Hardness:{" "}
+                  </span>{" "}
                   {hardness}
                 </div>
               )}
