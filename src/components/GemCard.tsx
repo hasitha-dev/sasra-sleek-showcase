@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { cn } from '@/lib/utils';
 import ContactWhatsApp from './ContactWhatsApp';
+import { Separator } from './ui/separator';
 
 interface GemCardProps {
   id: string;
@@ -10,6 +12,10 @@ interface GemCardProps {
   imageSrc: string;
   carat?: string;
   origin?: string;
+  hardness?: number;
+  specific_gravity_low?: number;
+  specific_gravity_high?: number;
+  chemical_formula?: string;
   phone?: string;
   className?: string;
   style?: React.CSSProperties;
@@ -23,6 +29,10 @@ const GemCard: React.FC<GemCardProps> = ({
   imageSrc,
   carat,
   origin,
+  hardness,
+  specific_gravity_low,
+  specific_gravity_high,
+  chemical_formula,
   phone = "+12345678901",
   className,
   style,
@@ -52,7 +62,7 @@ const GemCard: React.FC<GemCardProps> = ({
       <div className="p-5">
         <h3 className="text-xl font-display font-semibold">{name}</h3>
         
-        {/* Properties */}
+        {/* Basic Properties */}
         <div className="mt-2 grid grid-cols-2 gap-2 text-sm text-muted-foreground">
           {carat && (
             <div>
@@ -70,6 +80,32 @@ const GemCard: React.FC<GemCardProps> = ({
         <p className="mt-3 text-muted-foreground line-clamp-2">
           {description}
         </p>
+        
+        {/* Advanced Properties */}
+        {(hardness || specific_gravity_low || chemical_formula) && (
+          <>
+            <Separator className="my-3" />
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+              {hardness && (
+                <div>
+                  <span className="font-medium text-foreground">Hardness:</span> {hardness}
+                </div>
+              )}
+              
+              {(specific_gravity_low && specific_gravity_high) && (
+                <div>
+                  <span className="font-medium text-foreground">Sp. Gravity:</span> {specific_gravity_low} - {specific_gravity_high}
+                </div>
+              )}
+              
+              {chemical_formula && (
+                <div className="col-span-2">
+                  <span className="font-medium text-foreground">Formula:</span> {chemical_formula}
+                </div>
+              )}
+            </div>
+          </>
+        )}
         
         <div className="mt-4">
           <ContactWhatsApp 
