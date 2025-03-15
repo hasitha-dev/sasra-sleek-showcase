@@ -437,7 +437,7 @@ const Gallery = () => {
       <PageHeader
         title="Our Gallery"
         subtitle="Explore our portfolio of premium stainless steel advertising, signage solutions, and exquisite gem collection."
-        backgroundImage="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&q=80&w=1920"
+        backgroundImage={brass_etching_2}
       />
 
       <section className="py-16 bg-muted/20">

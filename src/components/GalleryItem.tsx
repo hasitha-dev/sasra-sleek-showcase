@@ -1,7 +1,7 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { FilterCategory } from "./GalleryFilters";
+import gem_collection from "@/images/gem_collection.jpg";
 
 export interface GalleryItemProps {
   id: string;

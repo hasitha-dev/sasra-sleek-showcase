@@ -26,6 +26,7 @@ import RoseQuartz from "../images/gems/rose_quartz.webp";
 import JediSpinel from "../images/gems/jedi_spinel.jpg";
 import Tourmaline from "../images/gems/tourmaline.jpg";
 import Moonstone from "../images/gems/moonstone.jpg";
+import gem_collection from "@/images/gem_collection.jpg";
 
 export const GEMS = [
   {
@@ -222,7 +223,7 @@ const Gems = () => {
       <PageHeader
         title="Exquisite Gem Collection"
         subtitle="Discover our handpicked selection of rare and precious gemstones from around the world."
-        backgroundImage="https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1920"
+        backgroundImage={gem_collection}
       />
 
       <section className="py-16 md:py-24">
