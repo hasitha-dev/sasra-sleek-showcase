@@ -31,7 +31,7 @@ const Gems = () => {
     {
       id: 'gem003',
       name: 'Burmese Ruby',
-      description: 'Magnificent ruby from Burma with a rich "pigeon blood" red color that's highly valued.',
+      description: 'Magnificent ruby from Burma with a rich "pigeon blood" red color that\'s highly valued.',
       price: '$5,800',
       imageSrc: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1756',
       carat: '1.5 ct',
