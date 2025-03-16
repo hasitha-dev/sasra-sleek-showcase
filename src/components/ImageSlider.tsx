@@ -85,8 +85,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
           </div>
         ))}
         
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60 z-20"></div>
+        {/* Darker gradient overlay - updated with stronger opacity */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80 z-20"></div>
         
         {/* Content overlay */}
         {overlayContent && (
@@ -96,10 +96,10 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
         )}
       </div>
       
-      {/* Navigation arrows */}
+      {/* Navigation arrows - updated for better visibility */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-white bg-opacity-20 hover:bg-opacity-40 backdrop-blur-sm rounded-full p-2 transition-all duration-300"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full p-2.5 transition-all duration-300"
         aria-label="Previous slide"
       >
         <ChevronLeft className="text-white" size={24} />
@@ -107,13 +107,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
       
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-white bg-opacity-20 hover:bg-opacity-40 backdrop-blur-sm rounded-full p-2 transition-all duration-300"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full p-2.5 transition-all duration-300"
         aria-label="Next slide"
       >
         <ChevronRight className="text-white" size={24} />
       </button>
       
-      {/* Indicators */}
+      {/* Indicators - updated for better visibility */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
         {images.map((_, index) => (
           <button
@@ -123,7 +123,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
               "w-2 h-2 rounded-full transition-all duration-300",
               currentIndex === index
                 ? "bg-white w-6"
-                : "bg-white/50 hover:bg-white/80"
+                : "bg-white/40 hover:bg-white/70"
             )}
             aria-label={`Go to slide ${index + 1}`}
           />
